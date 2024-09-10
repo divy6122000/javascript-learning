@@ -111,36 +111,84 @@ const gameName = new String("Gta-vice-city")
 // document.body.innerHTML = anchorEle
 
 // 2.at -------------------------------------------------------------------------------------------
-console.log(gameName.at(0)); // G
+// console.log(gameName.at(0)); // G
 
-// 3.big ------------------------------------------------------------------------------------------- deperecated
-console.log(gameName.big()); // <big>Gta-vice-city</big>
+// 3.charAt -------------------------------------------------------------------------------------------
+// console.log(gameName.charAt(2)); // a
 
-// 4.blink ------------------------------------------------------------------------------------------- deperecated
-console.log(gameName.blink()); // <blink>Gta-vice-city</blink>
-
-// 5.bold ------------------------------------------------------------------------------------------- deperecated
-console.log(gameName.bold()); // <b>Gta-vice-city</b>
-
-// 5.charAt -------------------------------------------------------------------------------------------
-console.log(gameName.charAt(2)); // a
-
-// 5.charCodeAt -------------------------------------------------------------------------------------------
+// 4.charCodeAt -------------------------------------------------------------------------------------------
 // returns the Unicode value (an integer)
-console.log(gameName.charCodeAt(2)); // 97
+// console.log(gameName.charCodeAt(2)); // 97
 
 // 5.codePointAt -------------------------------------------------------------------------------------------
 //  similar to charCodeAt(), but it can handle characters that are represented by more than one 16-bit code unit includes emojis and some special characters
-console.log(gameName.codePointAt(2)); // 97
+// console.log(gameName.codePointAt(2)); // 97
 
-// 5.concat -------------------------------------------------------------------------------------------
+// 6.concat -------------------------------------------------------------------------------------------
 //  to merge two or more strings together
   const additionalText = " is a popular game"
   const additionalText2 = " ever."
-console.log(gameName.concat(additionalText,additionalText2)); // Gta-vice-city is a popular game ever.
+// console.log(gameName.concat(additionalText,additionalText2)); // Gta-vice-city is a popular game ever.
 
-// 5.endsWith -------------------------------------------------------------------------------------------
-console.log(gameName.endsWith("Gta")); // false
-console.log(gameName.endsWith("city")); // true
-console.log(gameName.endsWith("ty")); // true
+// 7.endsWith -------------------------------------------------------------------------------------------
+// console.log(gameName.endsWith("Gta")); // false
+// console.log(gameName.endsWith("city")); // true
+// console.log(gameName.endsWith("ty")); // true
+
+// 8.includes -------------------------------------------------------------------------------------------
+// console.log(gameName.includes("Gta")); // true
+// console.log(gameName.includes("Gta2")); // false
+
+// 9.indexOf -------------------------------------------------------------------------------------------
+// console.log(gameName.indexOf("vice")); // 4
+// console.log(gameName.indexOf("Vice")); // -1 //means no index found
+
+// 10.lastIndexOf -------------------------------------------------------------------------------------------
+// console.log(gameName.lastIndexOf("y")); // 12
+
+// 11.localeCompare -------------------------------------------------------------------------------------------
+// const a = "Gta-vice-city"
+// console.log(a.localeCompare(gameName, 'en', { sensitivity: 'base' }));
+// console.log(a.localeCompare(gameName));
+
+// 12.match -------------------------------------------------------------------------------------------
+// const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+// const regex = /[A-Z]/g;
+// const found = paragraph.match(regex);
+
+// console.log(found);
+
+// 13.replace -------------------------------------------------------------------------------------------
+// console.log(gameName.replace("Gta","divy"));//divy-vice-city
+// console.log(gameName.replace("gta","divy"));//Gta-vice-city
+
+// 14.replaceAll -------------------------------------------------------------------------------------------
+// const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// console.log(paragraph.replaceAll('dog', 'monkey')); //I think Ruth's monkey is cuter than your monkey!
+
+// 15.replaceAll -------------------------------------------------------------------------------------------
+// const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// console.log(paragraph.search(/[^\w\s']/g)); //
+
+// 16.slice -------------------------------------------------------------------------------------------
+// const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+// console.log(paragraph.slice(0,14)); //I think Ruth's
+
+// 17.split -------------------------------------------------------------------------------------------
+
+// console.log(gameName.split("-")); // [ 'Gta', 'vice', 'city' ]
+
+// 18.valueOf -------------------------------------------------------------------------------------------
+const date2 = new Date();
+// console.log(date2);
+const date = new Date().getTime()
+console.log(Math.floor(date/1000)); //1725197756
+
+console.log(Math.floor(date2.valueOf()/1000)); // 1725197756
+
+
+
 
